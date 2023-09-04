@@ -2,9 +2,8 @@ import re
 from data_dict import names
 
 def match_name(item):
-    while True:
-        pattern = re.compile("M[a-z]+")
-        return pattern.match(item)
+    pattern = re.compile("M[a-z]+")
+    return pattern.match(item)
 
 def main():
     matched_names = list(filter(match_name,names))
